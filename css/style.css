@@ -1,0 +1,115 @@
+body{
+	background: #fff0f2;
+	font-family: 'Ubuntu', sans-serif;
+}
+#container{
+	padding: 0;
+	margin: 0;
+}
+.title, 
+.div-box{
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	border-radius: 10px;
+	background: #bdab9d;
+}
+.title{
+	height: 100px;
+	margin: 15px auto;
+}
+.title .left{
+	float: left;
+}
+.title .right{
+	float: right;
+}
+.title .game-name{
+	color: #333;
+	font-size: 63px;
+	line-height: 100px;
+	margin: auto 20px;
+	font-weight: bold;
+}
+.title .score{
+	margin-left: 98px;
+	margin-top: 30px;	
+	font-size: 24px;
+	font-weight: bold;
+}
+.title .score .current-score{
+	color: #fff;
+	padding-left: 0.5em;
+	font-size: 30px;
+}
+.title .refresh{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url('../img/icon.png') no-repeat;
+	background-position: -240px -22px;
+	margin-top: 15px;
+	margin-right: 167px;
+	cursor: pointer;
+}
+
+.div-box div{
+	float: left;
+	height: 107px;
+	width: 107px;
+	line-height: 2;
+	background: #ccc0b2;
+	margin: 14.4px 0 0 14.4px;
+	text-align: center;
+	font-size: 50px;
+	vertical-align: middle;
+	color: #FFF;
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+    div.num2
+    {    	
+    	background:#eee4da;    	
+    }
+    div.num4
+    {
+    	background:#f3ae79;
+    }
+    div.num8
+    {
+    	background:#f59563;
+    }
+    div.num16
+    {
+    	background:#f8795e;
+    }
+    div.num32
+    {
+    	background:#edce71;
+    }
+    div.num64
+    {
+    	background:#f65d3b;
+    }
+    div.num128
+    {
+    	background:#edce71;
+    }
+    div.num256
+    {
+    	background:#edcc61;
+    }
+    div.num512
+    {
+    	background:#ecc850;
+    }
+    div.num1024
+    {
+    	background:#edc53f;
+    }
+		div.num2048
+		{
+			background:#eee4da; 
+		}
+		
