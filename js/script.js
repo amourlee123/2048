@@ -15,6 +15,8 @@ $(function(){
 			this.endX = 0;
 			this.level = [];
 			this.endY = 0;
+			this.flag = 1;
+			this.num = 1;
 			this.score = 0;
 			this.slide = false;		//是否是可滑动的， 默认不可以滑动，产生一个随机数
 			this.init();
@@ -24,9 +26,12 @@ $(function(){
 		
 			/*0的位置产生一个随机的2或者4*/
 			randomNum: function(){
-				var rand = Math.ceil(Math.random() * 4); 	//产生0-4的随机整数
-				if(rand != 4){
+				var rand = Math.ceil(Math.random() * 8); 	//产生0-4的随机整数
+				if(rand != 8){
 					rand = 2;
+				}
+				else{
+					rand = 4;
 				}
 				var x = Math.floor(Math.random() * 4),
 						y = Math.floor(Math.random() * 4);
@@ -92,9 +97,15 @@ $(function(){
 						else{
 							$(".div-box div").eq(num).removeClass().html("");
 						}
+						if(this.data[i][j] == this.flag * 2048){
+								$(".reward p span").html('"' + this.flag * 2048 + '"');
+								$(".reward").css({"display": "block"});
+								this.flag *= 2;
+						}
 					}
 				}
 				$(".current-score").html(this.score);
+			
 				for (var i = 0; i < 4; i++){	
 					for (var j = 0; j < 4; j++){
 							if(this.data[i][j] == 0){
@@ -108,7 +119,8 @@ $(function(){
 							}
 					}
 				}
-				alert("the game is over");
+				$(".page-bg").css({"display": "block"});
+				$(".skills").css({"display": "block"});
 			},			
 
 			moveUp: function(){
@@ -213,7 +225,7 @@ $(function(){
 				}
 				for (var i = 0; i < 4; i++){
 					for (var m = 0; m < 2; m++){
-						for (var j = 3; j > 3; j--){
+						for (var j = 3; j > 0; j--){
 								if (this.data[i][j] == 0 && this.data[i][j - 1] != 0){
 									this.data[i][j] = this.data[i][j - 1];
 									this.data[i][j - 1] = 0;
@@ -368,5 +380,8 @@ $(function(){
 					break;
 			}
 		}
+		$(".reward-content button").click(function(){
+				$(".reward").css({"display": "none"});
+		});
 
 })

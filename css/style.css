@@ -112,4 +112,78 @@ body{
 		{
 			background:#eee4da; 
 		}
-		
+
+.page-bg{
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.6;
+	background: #000;
+	z-index: 10000;
+	overflow: hidden;
+	display: none;
+}		
+.skills{
+	display: none;
+	position: fixed;
+	top: 0;
+	background: #FFF;
+	height: 120px;
+	width: 300px;
+	z-index: 10001;
+	text-align: center;
+	font-size: 30px;
+	line-height: 60px;
+	top: 50%;
+	margin-top: -60px;
+	left: 50%;
+	margin-left: -150px;
+	letter-spacing: 2px;
+}
+.skills span{
+	font-size: 22px;
+}
+.reward{
+	background: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: 10002;
+	display: none;
+}
+.reward-content{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;
+	text-align: center;
+}
+.reward-content img{
+	width: 100px;
+	height: 100px;
+}
+.reward-content p{
+	color: #fff;
+	font-size: 28px;
+}
+.reward-content p span {
+	color: red;
+	font-style: italic;
+}
+.reward-content button{
+	color: #fff;
+  background:#f3ae79;
+	margin-top: 5px;
+	height: 30px;
+	width: 100px;
+	border: 0;
+}
